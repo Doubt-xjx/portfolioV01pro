@@ -1,0 +1,351 @@
+/* 关于我页面样式 */
+
+/* 个人简介 */
+.about-intro {
+    padding: 60px 0 80px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.03);
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.about-content h3 {
+    font-size: 1.5rem;
+    color: #c9a96e;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.about-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #c9a96e;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* 工作经历 */
+.experience {
+    padding: 80px 0;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 50px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #c9a96e;
+    border: 4px solid #0f0f0f;
+    z-index: 1;
+}
+
+.timeline-header {
+    margin-bottom: 15px;
+}
+
+.timeline-header h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.company {
+    font-size: 1rem;
+    color: #c9a96e;
+    margin-right: 15px;
+}
+
+.period {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.timeline-content p {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.achievement-list {
+    padding-left: 20px;
+}
+
+.achievement-list li {
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+}
+
+.achievement-list li::before {
+    content: '•';
+    position: absolute;
+    left: -15px;
+    color: #c9a96e;
+}
+
+/* 技能与特长 */
+.skills {
+    padding: 80px 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.skill-category h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #c9a96e;
+}
+
+.skill-list li {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.skill-bar {
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: #c9a96e;
+    border-radius: 3px;
+}
+
+/* 教育背景 */
+.education {
+    padding: 80px 0;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.education .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.education .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.education .timeline-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 50px;
+}
+
+.education .timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.education .timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #c9a96e;
+    border: 4px solid #0f0f0f;
+    z-index: 1;
+}
+
+.education .timeline-header {
+    margin-bottom: 15px;
+}
+
+.education .timeline-header h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.education .company {
+    font-size: 1rem;
+    color: #c9a96e;
+    margin-right: 15px;
+}
+
+.education .period {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.education .timeline-content p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .about-image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .about-content h2 {
+        font-size: 2rem;
+    }
+    
+    .about-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .about-stats {
+        gap: 20px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-stats {
+        flex-wrap: wrap;
+    }
+    
+    .stat-item {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+    
+    .timeline::before {
+        left: 8px;
+    }
+    
+    .timeline-dot {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .education-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .education-icon {
+        font-size: 1.5rem;
+    }
+}

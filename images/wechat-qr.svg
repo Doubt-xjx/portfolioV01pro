@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#fff"/>
+  <path d="M50 50h10v10h-10z M70 50h10v10h-10z M90 50h10v10h-10z M110 50h10v10h-10z M130 50h10v10h-10z M50 70h10v10h-10z M130 70h10v10h-10z M50 90h10v10h-10z M70 90h10v10h-10z M90 90h10v10h-10z M110 90h10v10h-10z M130 90h10v10h-10z M50 110h10v10h-10z M130 110h10v10h-10z M50 130h10v10h-10z M70 130h10v10h-10z M90 130h10v10h-10z M110 130h10v10h-10z M130 130h10v10h-10z" fill="#333"/>
+  <text x="100" y="180" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">扫码添加微信</text>
+</svg>
