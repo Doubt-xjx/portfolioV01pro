@@ -2,7 +2,7 @@
 
 /* 个人简介 */
 .about-intro {
-    padding: 60px 0 80px;
+    padding: 150px 0 80px;
 }
 
 .about-grid {
@@ -348,4 +348,24 @@
     .education-icon {
         font-size: 1.5rem;
     }
+}
+
+/* 页面标题 */
+.page-title {
+    background-color: #0a0a0a;
+    padding: 60px 0;
+    margin-bottom: 30px;
+    text-align: center;
+    background-image: none; /* 移除可能的背景图片 */
+}
+
+.page-title h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.page-title p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
 }

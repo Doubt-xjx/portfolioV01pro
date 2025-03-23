@@ -111,21 +111,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const skeletonLoader = document.querySelector('.skeleton-loader');
     
     if (splineViewer && skeletonLoader) {
+        // 显示加载状态
+        skeletonLoader.style.display = 'block';
+        
         // 监听加载完成事件
         splineViewer.addEventListener('load', function() {
+            // 淡出加载动画
             skeletonLoader.style.opacity = '0';
             setTimeout(() => {
                 skeletonLoader.style.display = 'none';
             }, 300);
+            
+            console.log('Spline scene loaded successfully');
         });
 
         // 监听加载失败事件
-        splineViewer.addEventListener('error', function() {
-            console.error('Spline scene failed to load');
+        splineViewer.addEventListener('error', function(e) {
+            console.error('Spline scene failed to load:', e);
             skeletonLoader.style.display = 'none';
         });
 
-        // 设置加载超时
+        // 设置加载超时 - 10秒后如果还没加载完成，隐藏加载动画
         setTimeout(function() {
             if (skeletonLoader.style.display !== 'none') {
                 console.warn('Spline scene load timeout');
@@ -134,6 +140,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     skeletonLoader.style.display = 'none';
                 }, 300);
             }
-        }, 30000); // 30秒超时
+        }, 10000);
     }
 });

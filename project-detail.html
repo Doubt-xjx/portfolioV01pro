@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品详情 - 徐金鑫</title>
+    <meta name="description" content="徐金鑫的UI设计作品集，展示APP设计、网页设计、品牌设计等优秀作品">
+    <meta name="keywords" content="UI设计,UX设计,作品集,设计师,徐金鑫">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-img">
+                        <img src="images/logo-placeholder.svg" alt="徐金鑫LOGO">
+                    </div>
+                    <div class="logo-text">
+                        <h1>徐金鑫</h1>
+                        <p>个人作品项目</p>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li> 
+                    <li><a href="about.html">关于我</a></li>
+                    <li><a href="portfolio.html" class="active">作品集</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="打开菜单">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主要内容区 -->
+    <main>
+        <!-- 项目标题区 -->
+        <section class="project-header">
+            <div class="container">
+                <div class="back-link">
+                    <a href="portfolio.html" class="back-button">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>返回作品集</span>
+                    </a>
+                </div>
+                <h1 id="project-title">项目标题</h1>
+                <div class="project-meta">
+                    <div class="project-year" id="project-year">年份: <span>2023 - 2024</span></div>
+                    <div class="project-category" id="project-category">分类: <span>网页设计</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目描述 -->
+        <section class="project-description">
+            <div class="container">
+                <div class="description-content" id="project-description">
+                    <p>项目详细描述将在这里显示...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目图片瀑布流 -->
+        <section class="project-gallery">
+            <div class="container">
+                <div class="gallery-masonry" id="project-images">
+                    <!-- 图片将通过JavaScript动态加载 -->
+                    <div class="masonry-loading">
+                        <div class="spinner"></div>
+                        <p>加载作品图片中...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>&copy; 2025 徐金鑫·X_Lemon 版权所有</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 脚本 -->
+    <script src="js/main.js"></script>
+    <script src="js/project-detail.js"></script>
+</body>
+</html>
+    

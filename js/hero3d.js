@@ -25,7 +25,7 @@ const loadTimeout = setTimeout(() => {
   hideLoading();
 }, 15000);
 
-// 移除Spline相关初始化代码
+app.load()
   .then(() => {
     clearTimeout(loadTimeout);
     hideLoading();

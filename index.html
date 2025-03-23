@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#0a0a0a">
     
     
-    <title>徐金鑫 - UI设计师作品集 | UI设计师</title>
+    <!-- <title>徐金鑫 - UI设计师作品集 | UI设计师</title> -->
     
     <!-- Preload Critical Resources -->
     <link rel="preload" href="css/style.css" as="style">
@@ -40,8 +40,13 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html" aria-label="返回首页">
-                    <h1>徐金鑫</h1>
-                    <p>UI设计师</p>
+                    <div class="logo-img">
+                        <img src="images/logo-placeholder.svg" alt="徐金鑫LOGO">
+                    </div>
+                    <div class="logo-text">
+                        <h1>徐金鑫</h1>
+                        <p>个人作品项目</p>
+                    </div>
                 </a>
             </div>
             <nav role="navigation" aria-label="主导航">
@@ -77,8 +82,11 @@
             <div class="container">
                 <div class="hero-content">
                     <h1>你好！我是 徐金鑫</h1>
-                    <h2>UI设计师</h2>
-                    <p>拥有6年设计类工作经验，专注于产品设计与用户体验。擅长从0到1构建产品，把控顶层架构设计，统筹产品矩阵的整体规划。具备丰富的全平台设计经验，能熟练完成Web端与移动端的设计工作。善于从视觉与用户体验的双重维度思考问题，提供专业的优化建议与解决方案。我热爱设计事业，持续学习新的设计理念，具备良好的团队协作精神。擅长沟通，能快速适应新环境，乐于接受挑战。</p>
+                    <h2>资深UI设计师 & 产品设计师</h2>
+                    <p>拥有6年设计类工作经验，专注于产品设计与用户体验。擅长从0到1构建产品，把控顶层架构设计，统筹产品矩阵的整体规划。具备丰富的全平台设计经验，能熟练完成Web端与移动端的设计工作。善于从视觉与用户体验的双重维度思考问题，提供专业的优化建议与解决方案。</p>
+
+                    <p>我热爱设计事业，持续学习新的设计理念，具备良好的团队协作精神。擅长沟通，能快速适应新环境，乐于接受挑战。</p>
+
                     <div class="hero-buttons">
                         <a href="about.html" class="btn primary">了解更多</a>
                         <button type="button" class="btn secondary" id="wechatBtn" aria-label="查看微信二维码">
@@ -105,48 +113,155 @@
             </div>
         </section>
 
-        <!-- 精选作品 -->
-        <section class="selected-work" aria-labelledby="selected-work-title">
+        <!-- 我能做什么 -->
+        <section class="services" aria-labelledby="services-title">
             <div class="container">
                 <div class="section-header">
-                    <h2 id="selected-work-title">精选作品</h2>
-                    <a href="portfolio.html" class="view-all">
-                        查看全部 
-                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                        <span class="visually-hidden">查看所有作品</span>
-                    </a>
+                    <h2 id="services-title">我能做什么</h2>
                 </div>
-                <div class="work-grid">
-                    <article class="work-item">
-                        <a href="portfolio-detail.html">
-                            <div class="work-image">
-                                <img src="images/work-1.jpg" 
-                                     alt="现代电商平台界面展示" 
-                                     loading="lazy"
-                                     width="400"
-                                     height="300">
-                            </div>
-                            <div class="work-info">
-                                <h3>现代电商平台</h3>
-                                <p class="work-year">2024 - 2024</p>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="work-item">
-                        <a href="portfolio-detail.html">
-                            <div class="work-image">
-                                <img src="images/work-2.jpg" 
-                                     alt="AI驱动的数据分析平台界面展示" 
-                                     loading="lazy"
-                                     width="400"
-                                     height="300">
-                            </div>
-                            <div class="work-info">
-                                <h3>AI驱动的数据分析平台</h3>
-                                <p class="work-year">2023 - 2024</p>
-                            </div>
-                        </a>
-                    </article>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-desktop" aria-hidden="true"></i>
+                        </div>
+                        <h3>网页设计</h3>
+                        <p>以专业水准打造现代化、高品质的设计作品，注重细节与用户体验。</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-sitemap" aria-hidden="true"></i>
+                        </div>
+                        <h3>移动端设计</h3>
+                        <p>专业的移动应用界面设计，为iOS和Android平台提供优质的用户体验。</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                        </div>
+                        <h3>产品需求</h3>
+                        <p>深入理解用户需求，制定产品策略，设计产品原型，推动产品落地。</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-palette" aria-hidden="true"></i>
+                        </div>
+                        <h3>摄影拍摄</h3>
+                        <p>提供专业的产品摄影和图片处理服务，展现产品最佳视觉效果。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技能与特长 -->
+        <section class="skills" aria-labelledby="skills-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="skills-title" class="section-title">技能与特长</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>软件技能</h3>
+                        <ul class="skill-list">
+                            <li>
+                                <span class="skill-name">MasterGo</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">Adobe Photoshop</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">Adobe Illustrator</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">Blender</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">Adobe After Effects</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>专业技能</h3>
+                        <ul class="skill-list">
+                            <li>
+                                <span class="skill-name">UI设计</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">UX设计</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">交互设计</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">原型设计</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">三维设计</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>其他技能</h3>
+                        <ul class="skill-list">
+                            <li>
+                                <span class="skill-name">摄影拍摄</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">绘画</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">AIGC</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">视频剪辑</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%;"></div>
+                                </div>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -157,7 +272,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="copyright">
-                    <p>&copy; 2025 徐金鑫 版权所有</p>
+                    <p>&copy; 2025 徐金鑫·X_Lemon 版权所有</p>
                 </div>
                 
             </div>
@@ -166,26 +281,5 @@
 
     <!-- 脚本 -->
     <script src="js/main.js" defer></script>
-    
-    <!-- 3D场景加载状态处理 -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const splineViewer = document.querySelector('spline-viewer');
-            const skeletonLoader = document.querySelector('.skeleton-loader');
-            
-            if (splineViewer && skeletonLoader) {
-                skeletonLoader.style.display = 'block';
-                
-                splineViewer.addEventListener('load', function() {
-                    skeletonLoader.style.display = 'none';
-                });
-                
-                // 超时处理
-                setTimeout(function() {
-                    skeletonLoader.style.display = 'none';
-                }, 10000);
-            }
-        });
-    </script>
 </body>
 </html>

@@ -16,8 +16,13 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <h1>徐金鑫</h1>
-                    <p>UI设计师</p>
+                    <div class="logo-img">
+                        <img src="images/logo-placeholder.svg" alt="徐金鑫LOGO">
+                    </div>
+                    <div class="logo-text">
+                        <h1>徐金鑫</h1>
+                        <p>个人作品项目</p>
+                    </div>
                 </a>
             </div>
             <nav>
@@ -26,11 +31,11 @@
                     <li><a href="about.html">关于我</a></li>
                     <li><a href="portfolio.html" class="active">作品集</a></li>
                 </ul>
-                <div class="mobile-menu-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <button class="mobile-menu-btn" aria-label="打开菜单">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
             </nav>
         </div>
     </header>
@@ -39,7 +44,7 @@
     <section class="page-title">
         <div class="container">
             <h1>作品集</h1>
-            <p>精选UI设计作品展示</p>
+            <p>部分设计作品展示</p>
         </div>
     </section>
 
@@ -48,10 +53,10 @@
         <div class="container">
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">全部</button>
-                <button class="filter-btn" data-filter="app">APP设计</button>
                 <button class="filter-btn" data-filter="web">网页设计</button>
-                <button class="filter-btn" data-filter="brand">品牌设计</button>
-                <button class="filter-btn" data-filter="miniprogram">小程序设计</button>
+                <button class="filter-btn" data-filter="app">移动端设计</button>
+                <button class="filter-btn" data-filter="3d">三维设计</button>
+                <button class="filter-btn" data-filter="other">其他</button>
             </div>
         </div>
     </section>
@@ -60,107 +65,397 @@
     <section class="portfolio-grid">
         <div class="container">
             <div class="work-grid">
-                <!-- 作品项目1 -->
+                <!-- 作品项目web-->
                 <div class="work-item" data-category="web">
-                    <a href="portfolio-detail.html?project=ecommerce">
+                    <a href="project-detail.html?id=ykdhtglxt">
                         <div class="work-image">
-                            <img src="images/work-1.jpg" alt="现代电商平台" loading="lazy">
+                            <img src="https://i.postimg.cc/htmKR7tZ/web-ykdhtglxt.png" alt="亿科达合同管理系统" loading="lazy">
                         </div>
                         <div class="work-info">
-                            <h3>现代电商平台</h3>
-                            <p class="work-year">2024 - 2024</p>
+                            <h3>亿科达合同管理系统</h3>
+                            <p class="work-year">2025 - 2025</p>
                             <div class="work-tags">
                                 <span>网页设计</span>
-                                <span>电商</span>
+                                <span>后台合同管理</span>
                             </div>
                         </div>
                     </a>
                 </div>
-                
-                <!-- 作品项目2 -->
-                <div class="work-item" data-category="app">
-                    <a href="portfolio-detail.html?project=analytics">
+
+                <div class="work-item" data-category="web">
+                    <a href="project-detail.html?id=phjgpt">
                         <div class="work-image">
-                            <img src="images/work-2.jpg" alt="AI驱动的数据分析平台" loading="lazy">
+                            <img src="https://i.postimg.cc/v86Pw39h/web-phjgpt.png" alt="普货监管平台" loading="lazy">
                         </div>
                         <div class="work-info">
-                            <h3>AI驱动的数据分析平台</h3>
+                            <h3>普货监管平台</h3>
+                            <p class="work-year">2023 - 2023</p>
+                            <div class="work-tags">
+                                <span>网页设计</span>
+                                <span>车辆管理</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="work-item" data-category="web">
+                    <a href="project-detail.html?id=ddjy">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/Qtv0WTLc/web-ddjy.png" alt="迪迪救援pc端" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>迪迪救援pc端</h3>
+                            <p class="work-year">2023 - 至今</p>
+                            <div class="work-tags">
+                                <span>网页设计</span>
+                                <span>道路救援</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="work-item" data-category="web">
+                    <a href="project-detail.html?id=ygbxzzfwpt">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/wMJF5jHZ/web-ygbxzzfwpt.png" alt="阳光保险增值服务平台" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>阳光保险增值服务平台</h3>
+                            <p class="work-year">2023 - 2023</p>
+                            <div class="work-tags">
+                                <span>网页设计</span>
+                                <span>保险增值服务</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="work-item" data-category="web">
+                    <a href="project-detail.html?id=ykglptcjyypt">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/KvS0GBD2/web-ykglptcjyypt.png" alt="云控管理平台场景应用平台" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>云控管理平台场景应用平台</h3>
+                            <p class="work-year">2023 - 2023</p>
+                            <div class="work-tags">
+                                <span>网页设计</span>
+                                <span>车辆管理</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="work-item" data-category="web">
+                    <a href="project-detail.html?id=ythlpyyjgksh">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/SKsrTrkW/web-ythlpyyjgksh.png" alt="一体化理赔运营监控可视化" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>一体化理赔运营监控可视化</h3>
+                            <p class="work-year">2023 - 2023</p>
+                            <div class="work-tags">
+                                <span>网页设计</span>
+                                <span>数据大屏</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="work-item" data-category="web">
+                    <a href="project-detail.html?id=qcfwzxszyyclglpt">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/HkT35mNv/web-qcfwzxszyyclglpt.png" alt="汽车服务中心数字运营管理平台" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>汽车服务中心数字运营管理平台</h3>
+                            <p class="work-year">2024 - 2025</p>
+                            <div class="work-tags">
+                                <span>网页设计</span>
+                                <span>车辆管理</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="work-item" data-category="web">
+                    <a href="project-detail.html?id=webxlt">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/J4NPG0pB/web-xlt.png" alt="晓邻通管理后台" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>晓邻通管理后台</h3>
+                            <p class="work-year">2023 - 2023</p>
+                            <div class="work-tags">
+                                <span>网页设计</span>
+                                <span>社区服务</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="work-item" data-category="web">
+                    <a href="project-detail.html?id=ygbjfgsrcjxhglxt">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/fR5CfFnz/web-ygbjfgsrcjxhglxt.png" alt="阳光北京分公司人车精细化管理系统" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>阳光北京分公司人车精细化管理系统</h3>
+                            <p class="work-year">2024-2025</p>
+                            <div class="work-tags">
+                                <span>网页设计</span>
+                                <span>车辆管理</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                
+                <!-- 作品项目app-->
+                <div class="work-item" data-category="app">
+                    <a href="project-detail.html?id=ddjyjs">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/jjZHyJfL/app-ddjyjs.png" alt="迪迪救援技师APP" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>迪迪救援技师APP（V4.0）</h3>
+                            <p class="work-year">2024 - 2024</p>
+                            <div class="work-tags">
+                                <span>APP设计</span>
+                                <span>救援工具</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="work-item" data-category="app">
+                    <a href="project-detail.html?id=appxlt">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/9X4kFW3G/app-xlt.png" alt="晓邻通" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>晓邻通</h3>
                             <p class="work-year">2023 - 2024</p>
                             <div class="work-tags">
                                 <span>APP设计</span>
-                                <span>数据分析</span>
+                                <span>社区服务</span>
                             </div>
                         </div>
                     </a>
                 </div>
-                
-                <!-- 作品项目3 -->
-                <div class="work-item" data-category="brand">
-                    <a href="portfolio-detail.html?project=brand">
+
+                <div class="work-item" data-category="app">
+                    <a href="project-detail.html?id=ddcf">
                         <div class="work-image">
-                            <img src="images/work-3.jpg" alt="时尚品牌形象设计" loading="lazy">
+                            <img src="https://i.postimg.cc/x8bLrx4z/app-ddcf.png" alt="迪迪车服" loading="lazy">
                         </div>
                         <div class="work-info">
-                            <h3>时尚品牌形象设计</h3>
+                            <h3>迪迪车服</h3>
+                            <p class="work-year">2024 - 2024</p>
+                            <div class="work-tags">
+                                <span>APP设计</span>
+                                <span>车辆服务</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="work-item" data-category="app">
+                    <a href="project-detail.html?id=ddsgjy">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/d1386tRn/app-ddsgjy.png" alt="迪迪事故救援" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>迪迪事故救援</h3>
                             <p class="work-year">2023 - 2023</p>
                             <div class="work-tags">
-                                <span>品牌设计</span>
-                                <span>时尚</span>
+                                <span>APP设计</span>
+                                <span>车辆救援</span>
                             </div>
                         </div>
                     </a>
                 </div>
-                
-                <!-- 作品项目4 -->
-                <div class="work-item" data-category="miniprogram">
-                    <a href="portfolio-detail.html?project=miniprogram">
-                        <div class="work-image">
-                            <img src="images/work-4.jpg" alt="外卖配送小程序" loading="lazy">
-                        </div>
-                        <div class="work-info">
-                            <h3>外卖配送小程序</h3>
-                            <p class="work-year">2022 - 2023</p>
-                            <div class="work-tags">
-                                <span>小程序设计</span>
-                                <span>餐饮</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                
-                <!-- 作品项目5 -->
+
                 <div class="work-item" data-category="app">
-                    <a href="portfolio-detail.html?project=fitness">
+                    <a href="project-detail.html?id=hycyzj">
                         <div class="work-image">
-                            <img src="images/work-5.jpg" alt="健身追踪应用" loading="lazy">
+                            <img src="https://i.postimg.cc/85YL0QtG/app-hycyzj.png" alt="货运车友之家" loading="lazy">
                         </div>
                         <div class="work-info">
-                            <h3>健身追踪应用</h3>
+                            <h3>货运车友之家</h3>
+                            <p class="work-year">2023 - 2023</p>
+                            <div class="work-tags">
+                                <span>APP设计</span>
+                                <span>车辆服务</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="work-item" data-category="app">
+                    <a href="project-detail.html?id=ybjy">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/zD9cy954/app-ybjy.png" alt="亿保救援" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>亿保救援</h3>
                             <p class="work-year">2022 - 2022</p>
                             <div class="work-tags">
                                 <span>APP设计</span>
-                                <span>健康</span>
+                                <span>车辆救援</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="work-item" data-category="app">
+                    <a href="project-detail.html?id=ybqyyc">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/m2C6C8gk/app-ybqyyc.png" alt="亿保企业用车" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>亿保企业用车</h3>
+                            <p class="work-year">2022 - 2022</p>
+                            <div class="work-tags">
+                                <span>APP设计</span>
+                                <span>车辆管理</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="work-item" data-category="app">
+                    <a href="project-detail.html?id=ybxptgc">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/9z5Zcd6N/app-ybxptgc.png" alt="亿保新平台管车小程序" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>亿保新平台管车小程序</h3>
+                            <p class="work-year">2024 - 2024</p>
+                            <div class="work-tags">
+                                <span>APP设计</span>
+                                <span>车辆管理</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="work-item" data-category="app">
+                    <a href="project-detail.html?id=ycgclglxt">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/6phj1qRN/app-ycgclglxt.png" alt="亿车管车辆管理系统" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>亿车管车辆管理系统</h3>
+                            <p class="work-year">2022 - 2022</p>
+                            <div class="work-tags">
+                                <span>APP设计</span>
+                                <span>车辆管理</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="work-item" data-category="app">
+                    <a href="project-detail.html?id=ykdywglpt">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/Bn37gHjg/app-ykdywglpt.png" alt="亿科达运维管理平台" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>亿科达运维管理平台</h3>
+                            <p class="work-year">2023 - 2023</p>
+                            <div class="work-tags">
+                                <span>APP设计</span>
+                                <span>运维管理</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="work-item" data-category="app">
+                    <a href="project-detail.html?id=zjclaqjc">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/rpFn6TCR/app-zjclaqjc.png" alt="紫金车辆安全检测" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>紫金车辆安全检测</h3>
+                            <p class="work-year">2024 - 2024</p>
+                            <div class="work-tags">
+                                <span>APP设计</span>
+                                <span>车辆服务</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="work-item" data-category="app">
+                    <a href="project-detail.html?id=fwjly">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/q7bm4Fjb/app-fwjly.png" alt="服务记录仪" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>服务记录仪</h3>
+                            <p class="work-year">2024 - 2025</p>
+                            <div class="work-tags">
+                                <span>APP设计</span>
+                                <span>理赔查勘员管理</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="work-item" data-category="app">
+                    <a href="project-detail.html?id=ysfbddjy">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/vB40BvKQ/app-ysfbddjy.png" alt="云闪付版迪迪救援" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>云闪付版迪迪救援</h3>
+                            <p class="work-year">2024 - 2024</p>
+                            <div class="work-tags">
+                                <span>APP设计</span>
+                                <span>车辆服务</span>
                             </div>
                         </div>
                     </a>
                 </div>
                 
-                <!-- 作品项目6 -->
-                <div class="work-item" data-category="web">
-                    <a href="portfolio-detail.html?project=education">
+                <!-- 作品项目3d -->
+                <div class="work-item" data-category="3d">
+                    <a href="project-detail.html?id=clcj">
                         <div class="work-image">
-                            <img src="images/work-6.jpg" alt="在线教育平台" loading="lazy">
+                            <img src="https://i.postimg.cc/kMK9LC67/3D-clcj.png" alt="车辆场景" loading="lazy">
                         </div>
                         <div class="work-info">
-                            <h3>在线教育平台</h3>
-                            <p class="work-year">2021 - 2022</p>
+                            <h3>车辆场景</h3>
+                            <p class="work-year">2022 - 至今</p>
                             <div class="work-tags">
-                                <span>网页设计</span>
-                                <span>教育</span>
+                                <span>车辆场景</span>
+                                <span>设计库</span>
                             </div>
                         </div>
                     </a>
                 </div>
+                
+                <!-- 作品项目其他 -->
+                <div class="work-item" data-category="other">
+                    <a href="project-detail.html?id=ppt">
+                        <div class="work-image">
+                            <img src="https://i.postimg.cc/fyKQRx9D/other-ppt.png" alt="PPT排版设计" loading="lazy">
+                        </div>
+                        <div class="work-info">
+                            <h3>PPT排版设计</h3>
+                            <p class="work-year">2023 - 至今</p>
+                            <div class="work-tags">
+                                <span>PPT排版设计</span>
+                                <span>设计库</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                
+                
             </div>
         </div>
     </section>
@@ -170,7 +465,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="copyright">
-                    <p>&copy; 2025 徐金鑫 版权所有</p>
+                    <p>&copy; 2025 徐金鑫·X_Lemon 版权所有</p>
                 </div>
                 
             </div>
