@@ -5,12 +5,14 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #0f0f0f;
     color: #fff;
+  
 }
 
 a {
@@ -34,147 +36,258 @@ img {
     padding: 0 20px;
 }
 
-/* 按钮样式 */
+/* 统一按钮样式 */
 .btn {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 32px;
+    font-size: 1rem;
     font-weight: 500;
+    border-radius: 10px;
     transition: all 0.3s ease;
+    border: none;
     cursor: pointer;
+    min-width: 160px;
+    text-align: center;
 }
 
-/* 模态框样式 */
-.modal {
+.btn.primary {
+    background:  #c9a96e;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(208, 185, 12, 0.3);
+}
+
+.btn.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn.primary:hover {
+    background: #886d3c;
+    box-shadow: 0 6px 16px  rgba(208, 185, 12, 0.3);
+}
+
+.btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* 移动端菜单按钮样式 */
+.mobile-menu-btn {
     display: none;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.mobile-menu-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    position: absolute;
+    left: 11px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-btn span:nth-child(1) { top: 14px; }
+.mobile-menu-btn span:nth-child(2) { top: 21px; }
+.mobile-menu-btn span:nth-child(3) { top: 28px; }
+
+.mobile-menu-btn.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 21px;
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 21px;
+}
+
+/* 微信二维码弹窗样式 */
+.modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(20px);
+    display: none;
     justify-content: center;
     align-items: center;
-    pointer-events: auto;
+    z-index: 1000;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.modal.show {
-    display: flex;
+.modal.active {
+    opacity: 1;
 }
 
 .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
+    background: rgba(30, 30, 30, 0.95);
+    border-radius: 24px;
+    padding: 40px;
     position: relative;
-    max-width: 90%;
-    max-height: 90%;
+    width: 90%;
+    max-width: 600px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    display: block;
 }
 
 .modal-close {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    color: #333;
-    line-height: 1;
-}
-
-.primary {
-    background-color: #c9a96e;
-    color: #fff;
-}
-
-.primary:hover {
-    background-color: #b89659;
-}
-
-.secondary {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.secondary:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* 导航栏 */
-header {
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: rgba(15, 15, 15, 0.9);
+    top: -60px;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo a {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: #fff;
     display: flex;
     align-items: center;
-    gap: 12px;
-}
-
-.logo img {
-    width: 40px;
-    height: 40px;
-}
-
-.logo .text-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.logo h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 5px;
-    line-height: 1;
-}
-
-.logo p {
-    font-size: 0.875rem;
-    color: #c9a96e;
-}
-
-nav ul {
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 30px;
-}
-
-nav ul li a {
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #c9a96e;
-}
-
-.mobile-menu-btn {
-    display: none;
-    flex-direction: column;
+    justify-content: center;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.mobile-menu-btn span {
-    width: 25px;
-    height: 2px;
-    background-color: #fff;
-    margin: 3px 0;
-    transition: all 0.3s ease;
+.modal-close i {
+    font-size: 20px;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* 移动端导航菜单样式 */
+@media screen and (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    nav ul.active {
+        display: flex;
+        opacity: 1;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+        transform: translateY(20px);
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    nav ul.active li {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    nav ul li a {
+        font-size: 24px;
+        padding: 12px 24px;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        display: block;
+    }
+
+    nav ul li a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 480px) {
+    .modal-content {
+        padding: 30px;
+    }
+
+    .modal-close {
+        top: -50px;
+    }
+
+    .btn {
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+}
+
+/* 禁止滚动类 */
+.no-scroll {
+    overflow: hidden;
 }
 
 /* 可访问性辅助类 */
@@ -221,13 +334,32 @@ nav ul li a:hover {
     width: 100%;
     height: 800px;
     z-index: 1;
-    pointer-events: none;
+    pointer-events: none; /* 允许事件穿透到spline-viewer */
 }
 
 spline-viewer {
     width: 100%;
     height: 800px;
-    pointer-events: auto;
+    display: block;
+    pointer-events: auto; /* 确保spline-viewer可以接收鼠标事件 */
+}
+
+.skeleton-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    z-index: 2;
+    pointer-events: none; /* 确保加载动画不影响鼠标事件 */
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
 }
 
 .hero .container {
@@ -238,19 +370,20 @@ spline-viewer {
     align-items: center;
     justify-content: flex-start;
     padding: 0 40px;
-    pointer-events: none;
+    pointer-events: none; /* 允许事件穿透到spline-viewer */
 }
 
 .hero-content {
-    background-color: rgba(15, 15, 15, 0.6);
+    background: rgba(15, 15, 15, 0.75);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 40px;
-    border-radius: 20px;
+    border-radius: 24px;
     max-width: 600px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    pointer-events: auto;
+    margin-top: 60px;
+    pointer-events: auto; /* 确保内容区域可以接收鼠标事件 */
 }
 
 .hero h1 {
@@ -277,7 +410,7 @@ spline-viewer {
     display: flex;
     gap: 15px;
     margin-bottom: 30px;
-    pointer-events: auto;
+    pointer-events: auto; /* 确保按钮可以接收鼠标事件 */
 }
 
 .location {
@@ -285,7 +418,7 @@ spline-viewer {
     align-items: center;
     color: rgba(255, 255, 255, 0.6);
     font-size: 0.9rem;
-    pointer-events: auto;
+    pointer-events: auto; /* 确保位置信息可以接收鼠标事件 */
 }
 
 .location i {
@@ -414,19 +547,6 @@ footer {
     color: #c9a96e;
 }
 
-/* 骨架屏样式 */
-.skeleton-loader {
-    display: none;
-    background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
-    background-size: 200% 100%;
-    animation: loading 1.5s infinite;
-}
-
-@keyframes loading {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-}
-
 /* 响应式设计 */
 @media (max-width: 992px) {
     .hero h1 {
@@ -509,4 +629,81 @@ footer {
         padding: 20px;
         border-radius: 15px;
     }
+}
+
+/* 头部样式 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 20px 0;
+    background: rgba(15, 15, 15, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    z-index: 1001;
+}
+
+.logo a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: #fff;
+}
+
+.logo p {
+    font-size: 0.9rem;
+    color: #c9a96e;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* 确保主内容区域不被固定头部遮挡 */
+main {
+    padding-top: 80px;
 }

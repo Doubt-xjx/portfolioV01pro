@@ -104,9 +104,8 @@
 ### 访问路径
 - 首页：http://localhost:8000
 - 作品集：http://localhost:8000/portfolio.html
-- 服务页面：http://localhost:8000/services.html
 - 关于页面：http://localhost:8000/about.html
-- 联系页面：http://localhost:8000/contact.html
+
 
 访问时请确保:
 1. 服务已经成功启动
